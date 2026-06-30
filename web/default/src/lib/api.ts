@@ -36,7 +36,7 @@ export type ApiRequestConfig = AxiosRequestConfig;
 // ============================================================================
 
 // Base URL: empty string for same-origin API requests
-const baseURL = "http://localhost:3001";
+const baseURL = "";
 
 // Create axios instance with default config
 export const api = axios.create({
