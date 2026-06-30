@@ -102,22 +102,24 @@ export function Hero(props: HeroProps) {
         <div className="flex flex-col items-start text-left lg:col-span-6">
           {/* Top Pill Badge */}
           <div
-            className="landing-animate-fade-up mb-5 inline-flex items-center gap-1.5 rounded-full border border-[#22C55E] bg-transparent px-3 py-1.5 text-[11px] font-medium text-[#22C55E] opacity-0 shadow-xs dark:border-[#22C55E] dark:bg-transparent dark:text-[#22C55E]"
+            className="landing-animate-fade-up mb-5 inline-flex items-center gap-1.5 rounded-full border border-main bg-transparent px-3 py-1.5 text-[11px] font-medium text-main opacity-0 shadow-xs dark:border-main dark:bg-transparent dark:text-main"
             style={{ animationDelay: "0ms" }}
           >
             <span className="relative flex size-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#22C55E] opacity-75" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-[#22C55E] dark:bg-[#22C55E]" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-main opacity-75" />
+              <span className="relative inline-flex size-1.5 rounded-full bg-main dark:bg-main" />
             </span>
-            <span>{t("AI Application Infrastructure Foundation")}</span>
+            <span className="font-mono uppercase">
+              {t("AI Application Infrastructure Foundation")}
+            </span>
           </div>
 
           <h1
-            className="landing-animate-fade-up text-[clamp(2.25rem,4.5vw,3.25rem)] leading-[1.15] font-bold tracking-tight"
+            className="landing-animate-fade-up text-[clamp(2.25rem,4.5vw,3.25rem)] leading-[1.15] font-bold tracking-tight font-mono"
             style={{ animationDelay: "60ms" }}
           >
             {t("Unified API Gateway for")}{" "}
-            <span className="bg-gradient-to-r text-[#22C55E] bg-clip-text">
+            <span className="bg-gradient-to-r text-main bg-clip-text">
               {t("Vast Range of AI Models")}
             </span>
           </h1>
@@ -137,7 +139,7 @@ export function Hero(props: HeroProps) {
             {props.isAuthenticated ? (
               <>
                 <Button
-                  className="group h-11 rounded-lg px-5 text-sm font-medium bg-[#22C55E] text-[#ffffff] [a]:hover:bg-[#16A34A]"
+                  className="group h-11 rounded-lg px-5 text-sm font-medium bg-main [a]:hover:bg-main-darken duration-300 transition-colors"
                   render={<Link to="/dashboard" />}
                 >
                   {t("Go to Dashboard")}
@@ -148,7 +150,7 @@ export function Hero(props: HeroProps) {
             ) : (
               <>
                 <Button
-                  className="group h-11 rounded-lg px-5 text-sm font-medium"
+                  className="group h-11 rounded-lg px-5 text-sm font-medium bg-main [a]:hover:bg-main-darken duration-300 transition-colors"
                   render={<Link to="/sign-up" />}
                 >
                   {t("Get Started")}

@@ -113,7 +113,7 @@ export function Features(_props: FeaturesProps) {
                 <div
                   className={`flex size-6 items-center justify-center rounded-full text-[10px] font-bold ${
                     i === 1
-                      ? "border border-[#A1FFC4] bg-[#EDFFF4] text-[#22C55E]"
+                      ? "border border-[#A1FFC4] bg-[#EDFFF4] text-main"
                       : "border-border/40 bg-muted text-muted-foreground border"
                   }`}
                 >
